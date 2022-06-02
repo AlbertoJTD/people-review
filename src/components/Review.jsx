@@ -1,16 +1,19 @@
 import React from 'react';
 import '../styles/Review.css'
 
-function Review() {
+function Review(props) {
   return (
     <div className='review-container'>
-      <img src={require('../images/review-spiderman.png')} alt='Review spiderman' className='image-review' />
+      <img src={require(`../images/review-${props.image}.png`)} alt='Review spiderman' className='image-review' />
       <div className='review-text-container'>
-        <p className='name'>Spiderman</p>
-        <p className='job'>Super-hero</p>
-        <p className='review'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Amet minima iusto nostrum fugit omnis ex nemo. Officia dolorem aperiam blanditiis
-          sed! Quae earum quidem quod maxime aliquam nihil quasi dolores?
+        <p className='name'>
+          <strong>{ props.name }</strong> at <i>{ props.country }</i>
+        </p>
+        <p className='job'>
+          { props.job }
+          </p>
+        <p className='review'>
+          "{ props.review }"
         </p>
       </div>
     </div>
