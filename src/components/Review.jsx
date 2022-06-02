@@ -1,9 +1,10 @@
 import React from 'react';
+import '../styles/Review.css'
 
 function Review() {
   return (
     <div className='review-container'>
-      <img src={require('../images/review-spiderman.png')} alt='Review spiderman' className='review-image' />
+      <img src={require('../images/review-spiderman.png')} alt='Review spiderman' className='image-review' />
       <div className='review-text-container'>
         <p className='name'>Spiderman</p>
         <p className='job'>Super-hero</p>
